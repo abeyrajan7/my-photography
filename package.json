@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/abeyrajan7/my-photography",
   "name": "react-responsive-navbar",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +17,6 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^3.1.1"
   },
-  "homepage": "https://github.com/abeyrajan7/my-photography.git",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
