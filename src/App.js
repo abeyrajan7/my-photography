@@ -1,6 +1,6 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
-import { BrowserRouter as Router,  Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Home } from "./components/Pages/Home";
 import { About } from "./components/Pages/About";
 import { Blog } from "./components/Pages/Blog";
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <NavBar />
 
-        <div className="pages">
+        <div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -21,7 +21,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-  </>
+    </>
   );
 }
 

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
+import { FaCameraRetro } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -12,10 +14,14 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            <span>CodeBucks</span>
+            <span>
+              CodeClicker <FaCameraRetro />
+            </span>
+
             {/* <i className="fas fa-code"></i> */}
             <span className="icon">
-              <CodeIcon />
+              <FontAwesomeIcon icon="fa-solid fa-camera" />
+              {/* <CodeIcon /> */}
             </span>
           </NavLink>
 
@@ -42,7 +48,7 @@ function NavBar() {
                 About
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink
                 exact
                 to="/blog"
@@ -63,18 +69,18 @@ function NavBar() {
               >
                 Contact Us
               </NavLink>
-            </li>
+            </li> */}
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             {/* <i className={click ? "fas fa-times" : "fas fa-bars"}></i> */}
 
             {click ? (
               <span className="icon">
-                <HamburgetMenuOpen />{" "}
+                <HamburgetMenuClose />
               </span>
             ) : (
               <span className="icon">
-                <HamburgetMenuClose />
+                <HamburgetMenuOpen />{" "}
               </span>
             )}
           </div>

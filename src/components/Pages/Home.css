@@ -1,0 +1,148 @@
+ .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .photo-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-img.portrait {
+    height: 100%;
+    width: auto;
+  }
+  
+  .photo-img:hover {
+    transform: scale(1.1);
+  }
+  
+  .popup-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+
+  .popup-img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 80%;
+    border-radius: 8px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 50%;
+    display: block;
+    z-index: 2001;
+    outline: none;
+  }
+    
+  .close-button::-moz-focus-inner {
+    border: 0;
+  }
+
+  .loading-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    background-color: #007bff;
+    transition: width 0.5s ease-in-out;
+    color: #333;
+    font-weight: bold;
+  }
+
+.close-button,
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 50%;
+  display: block; 
+}
+
+.close-button {
+  top: 10px;
+  right: 10px;
+}
+
+.prev-button {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.next-button {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.close-button:hover,
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Remove blinking cursor */
+.close-button:focus,
+.prev-button:focus,
+.next-button:focus {
+  outline: none;
+}
+
+.close-button::-moz-focus-inner,
+.prev-button::-moz-focus-inner,
+.next-button::-moz-focus-inner {
+  border: 0;
+}
+
+
+  
